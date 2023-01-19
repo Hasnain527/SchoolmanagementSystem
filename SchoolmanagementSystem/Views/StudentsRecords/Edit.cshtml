@@ -1,0 +1,70 @@
+﻿@model SchoolmanagementSystem.data.StudentsRecord
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+
+<h4>StudentsRecord</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="StudentCnic" />
+            <div class="form-group">
+                <label asp-for="StudentName" class="control-label"></label>
+                <input asp-for="StudentName" class="form-control" />
+                <span asp-validation-for="StudentName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StudentDegree" class="control-label"></label>
+                <input asp-for="StudentDegree" class="form-control" />
+                <span asp-validation-for="StudentDegree" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StudentClass" class="control-label"></label>
+                <input asp-for="StudentClass" class="form-control" />
+                <span asp-validation-for="StudentClass" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StudentSection" class="control-label"></label>
+                <input asp-for="StudentSection" class="form-control" />
+                <span asp-validation-for="StudentSection" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StudentPhone" class="control-label"></label>
+                <input asp-for="StudentPhone" class="form-control" />
+                <span asp-validation-for="StudentPhone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StudentAddress" class="control-label"></label>
+                <input asp-for="StudentAddress" class="form-control" />
+                <span asp-validation-for="StudentAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StudentGroup" class="control-label"></label>
+                <input asp-for="StudentGroup" class="form-control" />
+                <span asp-validation-for="StudentGroup" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+</body>
+</html>
